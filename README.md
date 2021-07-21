@@ -1,4 +1,4 @@
-# README
+# Repositório para a plicação de API em Ruby on Rails para o app Lista de Contatos
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
