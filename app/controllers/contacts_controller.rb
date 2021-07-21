@@ -11,7 +11,7 @@ class ContactsController < ApplicationController
           id: @contact.id
         }
       else
-        render json: { error: 'Não foi possível criar o anúncio' }
+        render json: { error: 'Não foi possível criar o contato' }
       end
   end
   private
