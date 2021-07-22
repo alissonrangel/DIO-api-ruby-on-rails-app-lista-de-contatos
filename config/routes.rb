@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   post "/contacts", to: 'contacts#create'
   get "/contacts", to: "contacts#index"
   delete "/contacts/:id", to: "contacts#destroy"
-  get /"contacts/:id", to: "users#show"
+  get "/contacts/:id", to: "users#show"
 
 end
