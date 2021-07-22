@@ -3,6 +3,21 @@ class ContactsController < ApplicationController
       @contacts = Contact.all
       render json: @contacts
   end
+
+  def show
+    @contact = Contact.find_by(id: params[:id])
+
+    if @contact != nil
+      render json: {                
+        id: @contact.id
+        name: @contact.name
+        phone: @contact.phone
+      }
+    else
+      render json: { error: 'Não foi possível encontrar o contato' }
+    end
+  end
+
   def create
       @contact = Contact.new(post_params)
 
