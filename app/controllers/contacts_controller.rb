@@ -9,8 +9,8 @@ class ContactsController < ApplicationController
 
     if @contact != nil
       render json: {                
-        id: @contact.id
-        name: @contact.name
+        id: @contact.id,
+        name: @contact.name,
         phone: @contact.phone
       }
     else
