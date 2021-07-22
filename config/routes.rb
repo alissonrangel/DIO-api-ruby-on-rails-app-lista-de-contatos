@@ -3,6 +3,6 @@ Rails.application.routes.draw do
 
   post "/contacts", to: 'contacts#create'
   get "/contacts", to: "contacts#index"
-  delete "/contacts" to: "contacts#destroy"
+  delete "/contacts/:id" to: "contacts#destroy"
 
 end
