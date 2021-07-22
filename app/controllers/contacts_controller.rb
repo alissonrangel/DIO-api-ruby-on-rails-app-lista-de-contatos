@@ -14,6 +14,18 @@ class ContactsController < ApplicationController
         render json: { error: 'Não foi possível criar o contato' }
       end
   end
+
+  def destroy
+    @contact = Contact.find_by(id: params[:id])
+
+    if @contact != nil
+      @contact.destroy
+      render json: { error: 'Contato deletado com sucesso' }
+    else
+      render json: { error: 'Contato não encontrado' }
+    end
+  end
+
   private
   def post_params
       params.permit(:name, :phone)
